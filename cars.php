@@ -1,10 +1,10 @@
 <?php
 
   class cars    {
-  private  $name;
-  public   $year;
-  public   $type;
-  public   $model;
+  public  $name = 'honda';
+  public   $year = 2010;
+  public   $type = 'sedan';
+  public   $model = 'accord';
 
   }
 
@@ -25,10 +25,16 @@
   $this->model = 'vault';
   }
   }
+  
+  $honda  = new cars;
+
   $toyota = new toyota;
   $chevy  = new chevy;
   print_r($toyota);
   print_r($chevy);
-
+  print_r($honda);
+  $chevy = &$honda;
+ 
+// Notice that when I have an ampersand in front of nissan Honda keeps its o//riginal year 2010 and ignores line 37 $honda = $nissan. When I dont have a//ampersand in front I get an undefined variable in nissan. 
 ?>
 
