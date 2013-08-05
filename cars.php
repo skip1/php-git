@@ -23,6 +23,7 @@
   $this->year = '2012';
   $this->type = 'coupe';
   $this->model = 'vault';
+  
   }
   }
   
@@ -33,8 +34,13 @@
   print_r($toyota);
   print_r($chevy);
   print_r($honda);
-  $chevy = &$honda;
+  $toyota = 'bestcar';
+  $notsure = &$toyota;
+  $toyota = 'worstcar';
+  echo $notsure;
  
-// Notice that when I have an ampersand in front of nissan Honda keeps its o//riginal year 2010 and ignores line 37 $honda = $nissan. When I dont have a//ampersand in front I get an undefined variable in nissan. 
+// Notice that when I have an ampersand in front of toyota it passes by reference and only registers worstcar if no ampersand than it keeps original value
 ?>
+
+
 
