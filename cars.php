@@ -38,9 +38,13 @@
   $notsure = &$toyota;
   $toyota = 'worstcar';
   echo $notsure;
- 
+  $cars = array($toyota, $chevy,$honda); 
+  print_r ($cars);
 // Notice that when I have an ampersand in front of toyota it passes by reference and only registers worstcar if no ampersand than it keeps original value
 ?>
+
+
+
 
 
 
