@@ -1,9 +1,10 @@
 <?php
  session_start();
-If (isset ($_SESSION['transaction']) && $_SERVER['REQUEST_METHOD'] == 'POST')
-{$ $_SESSION['count']=0;
-} else {
-$_SESSION['count']++;
+ if (isset($_SESSION[]) && $_SESSION['REQUEST_METHOD'] == 'POST') {
+ $_SESSION['count'] = 0;
+ } else {
+ $_SESSION['count'] ++;
+ 
   $transaction = array();
   $transaction['type'] = $_POST['type'];
   $transaction['amount']=$_POST['amount'];
@@ -24,7 +25,7 @@ $_SESSION['count']++;
   public $current_balance;
   public $transactions = array();
   }
-  $transaction = array ("trans1","trans2","trans3","trans4","trans5");
+  
 
  
 
@@ -51,13 +52,13 @@ $_SESSION['count']++;
  else
  $this->current_balance=$this->current_balance + $transaction['amount'];
   } 
-
-
+ echo $current_balance;
+ 
 
 
  'Request method: ' . $_SERVER["REQUEST_METHOD'];
  $form = '
- <FORM action = "aug12.php" method = "post">
+ <form action = "aug12.php" method = "post">
  <fieldset>
  <LABEL for = "amount">Amount: </LABEL>
  <INPUT type = "text" name = "amount" <BR>
@@ -65,6 +66,6 @@ $_SESSION['count']++;
  <INPUT type = "radio" name = "type" value = "credit"> Credit<BR>
  <INPUT type = "submit" value = "Send"> <INPUT type = "reset">
  </fieldset>
- </FORM>;
+ </form>;
  echo ($FORM)
 <?php print_r($_POST);?> 
