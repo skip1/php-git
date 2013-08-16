@@ -1,5 +1,8 @@
 <?php
   $handle = fopen("example.csv", "r");
-   print_r(fgetcsv($handle));
+   while (! feof($handle))
+   {
+   
+   print_r(fgetcsv($handle));  }
    fclose ($handle);
 ?>
